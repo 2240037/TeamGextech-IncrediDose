@@ -3,17 +3,15 @@
     $dbuser = "root";
     $dbpass = "";
     $dbname = "incredidose";
-    $conn = "";
-
-    $conn = mysqli_connect($dbserver, $dbuser, $dbpass, $dbname);
 
     try {
-        $conn = mysqli_connect($dbserver, $dbuser, $dbpass, $dbname);
-    } catch (mysqli_sql_exception) {
-        echo "Connection failed";
+         $db = new mysqli($dbserver, $dbuser, $dbpass, $dbname);
     }
-    
-    if ($conn) {
-        echo "Database connected successfully.";
+    catch (mysqli_sql_exception $e) {
+        echo "Connection failed.";
+    }
+
+    if ($db) {
+        echo "Connected successfully.";
     }
 ?>

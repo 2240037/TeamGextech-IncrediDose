@@ -1,5 +1,5 @@
 <?php
-include("includes/db.php");
+include("db.php");
 
 class Prescription implements JsonSerializable {
     private $prescriptionid;

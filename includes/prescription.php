@@ -53,7 +53,7 @@
         $prescription = new Prescription($prescriptionid, $dateprescribed, $validperiod, $patientid, $doctorid);
         $prescriptions[] = $prescription;
         }
-
+        echo json_encode($prescriptions);
     $stmt->close;
     
 ?>
